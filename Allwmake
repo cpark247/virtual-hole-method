@@ -1,0 +1,18 @@
+#!/bin/sh
+#------------------------------------------------------------------------------
+# Build the porousBafflePressureAMI boundary condition against OpenFOAM-9.
+#   source /opt/openfoam9/etc/bashrc && ./Allwmake
+#------------------------------------------------------------------------------
+cd "${0%/*}" || exit 1
+
+if [ -z "$WM_PROJECT_DIR" ]
+then
+    echo "Error: OpenFOAM environment not set. Source OpenFOAM-9 etc/bashrc first." 1>&2
+    exit 1
+fi
+
+. "$WM_PROJECT_DIR/wmake/scripts/AllwmakeParseArguments"
+
+wmake $targetType src/porousBafflePressureAMI
+
+#------------------------------------------------------------------------------

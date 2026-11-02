@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "If you use this method or code, please cite this repository."
+title: "Virtual Hole Method: flushing holes in pump impeller blades modelled as cyclicACMI patch pairs with a handbook-based porous-baffle pressure jump (OpenFOAM)"
+abstract: >-
+  Holes drilled through centrifugal-pump impeller blades to flush gas accumulations
+  are represented without changing CAD or mesh: blade faces inside each hole outline
+  on the pressure and suction sides are coupled as a cyclicACMI pair, and the hole's
+  hydraulic resistance (entrance, friction and Borda-Carnot exit losses after Idelchik)
+  is imposed as a Darcy-Forchheimer pressure jump by the boundary condition
+  porousBafflePressureAMI. Works for single-phase and Euler-Euler multiphase solvers
+  in MRF impeller simulations (OpenFOAM Foundation v9).
+type: software
+authors:
+  - family-names: Park
+    given-names: Changkyu
+    affiliation: "Chair of Hydraulic Fluid Machinery, Ruhr University Bochum"
+repository-code: "https://github.com/cpark247/virtual-hole-method"
+license: GPL-3.0-or-later
+keywords:
+  - OpenFOAM
+  - centrifugal pump
+  - impeller
+  - gas accumulation
+  - two-phase flow
+  - boundary condition
+  - cyclicACMI
+  - porous baffle
+  - hydraulic resistance
